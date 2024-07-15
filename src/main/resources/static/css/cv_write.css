@@ -61,29 +61,88 @@
 			font-size: 40px;
 			font-weight: bold;
 		}
-		#itemList {
-		  display: flex;
-		  flex-wrap: wrap;
-		  gap: 10px;
+		.container {
+		    /* width: 1000px; */
+		    margin: 0 auto;
+		    padding: 20px;
+		    background-color: #ffffff;
+		    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		}
-
-		#itemList .skill-item {
-		  background-color: #f1f1f1;
-		  padding: 5px 10px;
-		  border-radius: 20px;
-		  font-size: 14px;
-		  font-weight: bold;
-		  color: #333;
+		.write-container {
+		    border: 1px solid #b1b1b1;
+		    padding: 30px;
+		    border-radius: 10px;
+		    margin-bottom: 20px;
+		    margin-top: 40px;
 		}
-
-		#itemList .skill-item button {
-		  background-color: transparent;
-		  color: #666;
-		  border: none;
-		  cursor: pointer;
-		  margin-left: 5px;
+		.review-keysearch {
+		    margin-bottom: 20px;
 		}
-
-		#itemList .skill-item button:hover {
-		  color: #333;
+		.review-keysearch .keywords {
+		    display: flex;
+		    flex-wrap: wrap;
+		    border: 1px solid #ddd;
+		    padding: 10px;
+		    border-radius: 5px;
+		    background-color: #f9f9f9;
+		}
+		.keywords {
+			display: flex;
+			flex-wrap: wrap; /* 필요에 따라 줄 바꿈을 허용 */
+			gap: 10px; /* 항목 간의 간격 */
+		}
+		.keywords div {
+		    margin: 5px;
+		    padding: 5px 10px;
+		    border: 1px solid #ddd;
+		    border-radius: 15px;
+		    cursor: pointer;
+		    background-color: #e9f4ff;
+		}
+		.keywords div.selected {
+		    background-color: #007bff;
+		    color: #fff;
+		}
+		#itemList div {
+			cursor: pointer;
+			/* padding: 5px;
+			border: 1px solid #ccc;
+			margin: 5px;
+			display: inline-block; */
+			margin: 5px;
+		    padding: 5px 10px;
+		    border: 1px solid #ddd;
+		    border-radius: 15px;
+		    cursor: pointer;
+		    background-color: #ffffff;
+		    }
+		.spring2 {
+			display: none;
+		}
+		.java2 {
+			display: none;
+		}
+		.javaScript2 {
+			display: none;
+		}
+		.python2 {
+			display: none;
+		}
+		.htmlcss2 {
+			display: none;
+		}
+		.asp2 {
+			display: none;
+		}
+		.api2 {
+			display: none;
+		}
+		.jsp2 {
+			display: none;
+		}
+		.oracle2 {
+			display: none;
+		}
+		.mysql2 {
+			display: none;
 		}

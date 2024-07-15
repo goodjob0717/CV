@@ -9,93 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="<c:url value='/css/main2.css' />">
 	<link rel="stylesheet" href="/css/cv_write.css">
 	<script src="/js/cv_write.js"></script>
-	<style>
-	.container {
-        /* width: 1000px; */
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #ffffff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .write-container {
-        border: 1px solid #b1b1b1;
-        padding: 30px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        margin-top: 40px;
-    }
-	.review-keysearch {
-        margin-bottom: 20px;
-    }
-    .review-keysearch .keywords {
-        display: flex;
-        flex-wrap: wrap;
-        border: 1px solid #ddd;
-        padding: 10px;
-        border-radius: 5px;
-        background-color: #f9f9f9;
-    }
-	.keywords {
-		display: flex;
-		flex-wrap: wrap; /* 필요에 따라 줄 바꿈을 허용 */
-		gap: 10px; /* 항목 간의 간격 */
-	}
-    .keywords div {
-        margin: 5px;
-        padding: 5px 10px;
-        border: 1px solid #ddd;
-        border-radius: 15px;
-        cursor: pointer;
-        background-color: #e9f4ff;
-    }
-    .keywords div.selected {
-        background-color: #007bff;
-        color: #fff;
-    }
-	#itemList div {
-		cursor: pointer;
-		/* padding: 5px;
-		border: 1px solid #ccc;
-		margin: 5px;
-		display: inline-block; */
-		margin: 5px;
-        padding: 5px 10px;
-        border: 1px solid #ddd;
-        border-radius: 15px;
-        cursor: pointer;
-        background-color: #ffffff;
-        }
-	.spring2 {
-		display: none;
-	}
-	.java2 {
-		display: none;
-	}
-	.javaScript2 {
-		display: none;
-	}
-	.python2 {
-		display: none;
-	}
-	.htmlcss2 {
-		display: none;
-	}
-	.asp2 {
-		display: none;
-	}
-	.api2 {
-		display: none;
-	}
-	.jsp2 {
-		display: none;
-	}
-	.oracle2 {
-		display: none;
-	}
-	.mysql2 {
-		display: none;
-	}
-	</style>
+
 </head>
 <body>
 	<div class="sidebar">
@@ -111,7 +25,7 @@
 		<a href="#selfIntro_bar">자기소개서</a>
 	</div>
 	<div class="content">
-		<form name="cv_form" action="write" method="post">
+		<form name="cv_form" action="cv_write" method="post">
 			${CVDTO}
 			<h2>제목</h2>
 			<p><input type="text" placeholder="이력서 제목" name="cv_title" id="cv_title" value="${CVDTO.cv_name}" required></p><br>
@@ -177,7 +91,7 @@
 						<table id="highschool" class="hidden" border="1">
 							<tr>
 								<td>
-									<input type="text" placeholder="학교명*" name="e_name">
+									<input type="text" placeholder="학교명*" name="e_hi_name">
 								</td>
 								<td>
 									<div class="item">
@@ -186,7 +100,7 @@
 								</td>
 								<td>
 									<div class="item"> 
-										<select name="e_status"> 
+										<select name="e_hi_status"> 
 											<option value="" selected disabled>졸업상태*</option> 
 											<option value="graduate">졸업</option> 
 											<option value="expect">졸업예정</option> 
@@ -200,7 +114,7 @@
 							<tr>
 								<td>
 									<div class="item">
-										<input type="text" placeholder="학교명*" name="e_name">
+										<input type="text" placeholder="학교명*" name="e_uni_name">
 									</div>
 								</td>
 								<td>
@@ -215,7 +129,7 @@
 								</td>
 								<td rowspan="2">
 									<div class="item"> 
-										<select name="e_status"> 
+										<select name="e_uni_status"> 
 											<option value="" selected>졸업상태*</option> 
 											<option value="졸업">졸업</option> 
 											<option value="졸업예정">졸업예정</option> 
@@ -334,7 +248,9 @@
 				<tr>
 					<td colspan="4" class="left">
 						<div class="item">담당업무<br>
-							<textarea placeholder="담당하신 업무와 성과에 대해 간단명료하게 적어주세요." class="auto-resize" name="c_assignedTask"></textarea>
+							<!-- placeholder="담당하신 업무와 성과에 대해 간단명료하게 적어주세요."  -->
+							<!-- <input type="text" placeholder="담당하신 업무와 성과에 대해 간단명료하게 적어주세요." class="auto-resize" name="c_assignedTask"> -->
+							<textarea class="auto-resize" placeholder="담당하신 업무와 성과에 대해 간단명료하게 적어주세요." name="c_assignedTask"></textarea>
 						</div>
 					</td>        
 				</tr>
@@ -376,7 +292,9 @@
 				<tr>
 					<td colspan="8" class="left">
 						<div class="item">활동내역<br>
-							<textarea placeholder="내역" class="auto-resize" name="a_content"></textarea>
+							<!-- placeholder="내역"  -->
+							<textarea class="auto-resize" placeholder="내역" name="a_content"></textarea>
+							<!-- <input type="text" placeholder="내역" class="auto-resize" name="a_content"> -->
 						</div>
 					</td>    
 				</tr>
@@ -409,7 +327,9 @@
 				<tr>
 					<td colspan="8" class="left">
 						<div class="item">교육내용<br>
-							<textarea placeholder="내용" class="auto-resize" name="t_content"></textarea>
+							<!-- placeholder="내용"  -->
+							<textarea class="auto-resize" placeholder="내용" name="t_content"></textarea>
+							<!-- <input type="text" placeholder="내용" class="auto-resize" name="t_content"> -->
 						</div>
 					</td>    
 				</tr>
@@ -483,7 +403,9 @@
 				<tr>
 					<td>
 						<div class="item">
-							<textarea placeholder="해당내용을 입력하세요." class="auto-resize" name="cv_selfIntro"></textarea>
+							<!-- placeholder="해당내용을 입력하세요."  -->
+							<textarea class="auto-resize" placeholder="해당내용을 입력하세요." name="cv_selfIntro"></textarea>
+							<!-- <input type="text" placeholder="해당내용을 입력하세요." class="auto-resize" name="cv_selfIntro"> -->
 						</div>
 					</td>    
 				</tr>
@@ -495,7 +417,6 @@
 </body>
 </html>
 
-<!-- 스킬 -->
 <script>
 	document.querySelector('.spring1').addEventListener('click', function() {
 	document.querySelector('.spring2').style.display = 'block';

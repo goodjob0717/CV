@@ -23,17 +23,19 @@ public class CVDTO {
     private String cv_address;
     private Blob cv_photo;
     private String cv_selfIntro;
-
-    // 학력 8
+    
+    // 학력 11
     private String e_school;
-    private String e_name;
+    private String e_hi_name;
     private String e_hi_endMon;
+    private String e_hi_status;
+    private String e_uni_name;
     private Date e_uni_startMon;
     private Date e_uni_endMon;
     private String e_major;
     private double e_credit = 0.0;
     private int e_score = 0;
-    private String e_status;
+    private String e_uni_status;
 
     // 경력 8
     private String c_corpName;

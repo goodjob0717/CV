@@ -9,7 +9,7 @@
  	</selectKey>
 		insert into cv (
 		    cv_no, cv_title, cv_name, cv_birth, cv_sex, cv_email, cv_phone, cv_address, cv_photo, cv_selfIntro,
-		    e_school, e_name, e_hi_endMon, e_uni_startMon, e_uni_endMon, e_major, e_credit, e_score, e_status,
+		    e_school, e_hi_name, e_hi_endMon, e_hi_status, e_uni_name, e_uni_startMon, e_uni_endMon, e_major, e_credit, e_score, e_uni_status,
 		    c_corpName, c_dept, c_startMon, c_endMon, c_position, c_duty, c_salary, c_assignedTask,
 		    a_corpName, a_startMon, a_endMon, a_content, a_activitySort,
 		    p_name, p_date, p_corp,
@@ -18,7 +18,7 @@
 		    po_sort, po_url
 		) values (
 		    #{cv_no}, #{cv_title}, #{cv_name}, #{cv_birth}, #{cv_sex}, #{cv_email}, #{cv_phone}, #{cv_address}, #{cv_photo}, #{cv_selfIntro},
-		    #{e_school}, #{e_name}, #{e_hi_endMon}, #{e_uni_startMon}, #{e_uni_endMon}, #{e_major}, #{e_credit}, #{e_score}, #{e_status},
+		    #{e_school}, #{e_hi_name}, #{e_hi_endMon}, #{e_hi_status}, #{e_uni_name}, #{e_uni_startMon}, #{e_uni_endMon}, #{e_major}, #{e_credit}, #{e_score}, #{e_uni_status},
 		    #{c_corpName}, #{c_dept}, #{c_startMon}, #{c_endMon}, #{c_position}, #{c_duty}, #{c_salary}, #{c_assignedTask},
 		    #{a_corpName}, #{a_startMon}, #{a_endMon}, #{a_content}, #{a_activitySort},
 		    #{p_name}, #{p_date}, #{p_corp},
@@ -31,7 +31,7 @@
 	<select id="contentView" resultType="com.boot.dto.CVDTO">
         select
 			cv_no, cv_title, cv_name, cv_birth, cv_sex, cv_email, cv_phone, cv_address, cv_photo, cv_selfIntro,
-			e_school, e_name, e_hi_endMon, e_uni_startMon, e_uni_endMon, e_major, e_credit, e_score, e_status,
+			e_school, e_hi_name, e_hi_endMon, e_hi_status, e_uni_name, e_uni_startMon, e_uni_endMon, e_major, e_credit, e_score, e_uni_status,
 			c_corpName, c_dept, c_startMon, c_endMon, c_position, c_duty, c_salary, c_assignedTask,
 			a_corpName, a_startMon, a_endMon, a_content, a_activitySort,
 			p_name, p_date, p_corp,
@@ -55,14 +55,16 @@
 			    cv_photo = #{cv_photo},
 			    cv_selfIntro = #{cv_selfIntro},
 			    e_school = #{e_school},
-			    e_name = #{e_name},
+			    e_hi_name = #{e_hi_name},
 			    e_hi_endMon = #{e_hi_endMon},
+			    e_hi_status = #{e_hi_status},
+			    e_uni_name = #{e_uni_name},
 			    e_uni_startMon = #{e_uni_startMon},
 			    e_uni_endMon = #{e_uni_endMon},
 			    e_major = #{e_major},
 			    e_credit = #{e_credit},
 			    e_score = #{e_score},
-			    e_status = #{e_status},
+			    e_uni_status = #{e_uni_status},
 			    c_corpName = #{c_corpName},
 			    c_dept = #{c_dept},
 			    c_startMon = #{c_startMon},

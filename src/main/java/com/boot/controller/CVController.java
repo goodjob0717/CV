@@ -19,31 +19,31 @@ public class CVController {
 	@Autowired
     private CVService service;
 
-	@RequestMapping("/write")
+	@RequestMapping("/cv_write")
 	public String write(CVDTO cv) {
-		log.info("@# write");
+		log.info("@# cv_write");
 		
 		service.write(cv);
 		
-		return "write";
+		return "cv_write";
 	}
 	
-	@RequestMapping("/contentView")
+	@RequestMapping("/cv_contentView")
 	public String content_view(@RequestParam HashMap<String, String> param, Model model) {
 		log.info("@# contentView"+param);
 		
 		CVDTO dto = service.contentView(param);
 		model.addAttribute("contentView", dto);
 		
-		return "contentView";
+		return "cv_contentView";
 	}
 	
-	@RequestMapping("/modify")
+	@RequestMapping("/cv_modify")
 	public String modify(@RequestParam HashMap<String, String> param) {
-		log.info("@# modify");
+		log.info("@# cv_modify");
 		
 		service.modify(param);
 		
-		return "list";
+		return "redirect:myPage";
 	}
 }
