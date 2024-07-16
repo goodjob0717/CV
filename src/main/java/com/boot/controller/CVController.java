@@ -28,9 +28,19 @@ public class CVController {
 		return "cv_write";
 	}
 	
+	 @RequestMapping("/cv_save")
+	   public String cv_save(CVDTO cv) {
+	      log.info("@# cv_save");
+	      
+	      service.cv_save(cv);
+	      
+	      return "redirect:myPage";
+	   }
+
+	
 	@RequestMapping("/cv_contentView")
 	public String content_view(@RequestParam HashMap<String, String> param, Model model) {
-		log.info("@# contentView"+param);
+		log.info("@# cv_contentView"+param);
 		
 		CVDTO dto = service.contentView(param);
 		model.addAttribute("contentView", dto);
@@ -39,11 +49,17 @@ public class CVController {
 	}
 	
 	@RequestMapping("/cv_modify")
-	public String modify(@RequestParam HashMap<String, String> param) {
+	public String cv_modify(@RequestParam HashMap<String, String> param) {
 		log.info("@# cv_modify");
 		
-		service.modify(param);
+		service.cv_modify(param);
 		
 		return "redirect:myPage";
+	}
+	@RequestMapping("/faq")
+	public String faq() {
+		log.info("@# faq");
+		
+		return "faq";
 	}
 }

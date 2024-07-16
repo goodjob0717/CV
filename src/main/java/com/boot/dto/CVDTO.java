@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class CVDTO {
 
     // 개인정보 10
-    private int cv_no;
+	private Integer cv_no;
     private String cv_title;
     private String cv_name;
     private Date cv_birth;
@@ -74,4 +74,5 @@ public class CVDTO {
     // 포트폴리오 1
     private String po_sort;
     private String po_url;
+    private String user_id;
 }

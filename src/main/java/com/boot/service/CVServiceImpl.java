@@ -36,11 +36,18 @@ public class CVServiceImpl implements CVService{
 	}
 
 	@Override
-	public void modify(HashMap<String, String> param) {
+	public void cv_modify(HashMap<String, String> param) {
 		log.info("@# CVServiceImpl modify");
 		CVDAO dao = sqlSession.getMapper(CVDAO.class);
-		dao.modify(param);
+		dao.cv_modify(param);
 		log.info("@# CVDTO cv=>"+param);
+	}
+	
+	@Override
+	public void cv_save(CVDTO cv) {
+		CVDAO dao = sqlSession.getMapper(CVDAO.class);
+		dao.cv_save(cv);
+		log.info("@# CVDTO cv=>"+cv);
 	}
 	
 	

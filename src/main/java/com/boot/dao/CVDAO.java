@@ -11,8 +11,11 @@ import com.boot.dto.CVDTO;
 public interface CVDAO {
 //	insert
 	public void write(CVDTO cv);
+	
+	public void cv_save(CVDTO cv);
+	
 //	update
-	public void modify(HashMap<String, String> param);
+	public void cv_modify(HashMap<String, String> param);
 //	select
 	public CVDTO contentView(HashMap<String, String> param);
 }

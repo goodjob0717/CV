@@ -26,7 +26,7 @@
 	</div>
 	<div class="content">
 		<form name="cv_form" action="cv_write" method="post">
-			${CVDTO}
+<!--			${CVDTO}-->
 			<h2>제목</h2>
 			<p><input type="text" placeholder="이력서 제목" name="cv_title" id="cv_title" value="${CVDTO.cv_name}" required></p><br>
 			<h2 id="user_bar">개인정보</h2>
@@ -410,7 +410,10 @@
 					</td>    
 				</tr>
 			</table><br>
-			<input type="submit" class="btn btn-primary" value="저장">
+<!--			formaction="cv_modify"-->
+			<input type="hidden" name="user_id" value="${user_id}">
+			<input type="hidden" name="cv_no" value="${cv_no}">
+			<input type="submit" class="btn btn-primary" value="저장" formaction="cv_save">
 			<div id="hiddenInputs"></div>
 		</form>		
 	</div>

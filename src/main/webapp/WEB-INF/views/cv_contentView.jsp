@@ -8,12 +8,12 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<c:url value='/css/main.css' />">
 	<link rel="stylesheet" type="text/css" href="<c:url value='/css/main2.css' />">
-	<link rel="stylesheet" href="/css/cv_write.css">
+	<link rel="stylesheet" type="text/css" href="/css/cv_write.css">
 	<script src="/js/cv_write.js"></script>
 	<script type="text/javascript" src="/js/jquery.js"></script>
 </head>
 <body>
-	${contentView}
+<!--	${contentView}-->
 	<div class="sidebar">
 		<a href="#user_bar">개인정보</a>
 		<a href="#edu_bar">학력</a>
@@ -118,7 +118,7 @@
 							<tr>
 								<td>
 									<div class="item">
-										<input type="text" placeholder="학교명*" name="e_name" value="${contentView.e_uni_name}">
+										<input type="text" placeholder="학교명*" name="e_uni_name" value="${contentView.e_uni_name}">
 									</div>
 								</td>
 								<td>
@@ -414,6 +414,8 @@
 					</td>    
 				</tr>
 			</table><br>
+			<input type="hidden" name="user_id" value="${user_id}">
+			<input type="hidden" name="cv_no" value="${contentView.cv_no}">
 			<input type="submit" class="btn btn-primary" value="저장">
 			<div id="hiddenInputs"></div>
 		</form>		
